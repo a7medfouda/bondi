@@ -1,0 +1,206 @@
+/* google fonts ----------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* ----------------------------------------- */
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+/* start component */
+.component::after {
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 2px;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.component-icon {
+  color: var(--yellow-color);
+}
+/* end component */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.search svg {
+  color: var(--green-color);
+}
+.search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+  border: 1px solid white;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.main-btn:hover,
+.main-btn:focus {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  border-color: transparent;
+}
+.main-btn:focus {
+  border: 1px solid var(--yellow-color);
+}
+/* end navbar */
+/* start landing  */
+.landing {
+  background-color: var(--dark-color);
+  height: calc(100vh - 72px);
+}
+@media (max-width: 992px) {
+  .landing {
+    height: calc(100vh - 70px);
+  }
+}
+/* end landing  */
+/* start features */
+.icon-holder {
+  height: 180px;
+}
+.features .icon-back {
+  font-size: 10rem;
+  color: var(--section-color);
+}
+.icon-forward {
+  bottom: 10px;
+  color: var(--green-color);
+}
+.features .row h3 {
+  color: var(--yellow-color);
+}
+/* end features */
+/* start shuffle */
+.shuffle {
+  background-color: var(--section-color);
+}
+.shuffle ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .shuffle ul li {
+    padding: 0.5rem 0.8rem;
+  }
+}
+.shuffle ul li.active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.shuffle ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.shuffle-item {
+  background-color: white;
+  margin-bottom: calc((1.5rem * 0.5) * 2);
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.shuffle-item::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #1fb1cc75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  left: -100%;
+  transition: 0.3s;
+}
+.shuffle-item:hover::before {
+  left: 5px;
+}
+/* end shuffle */
+/* start design */
+.design .discription {
+  max-width: 500px;
+}
+@media (max-width: 767px) {
+  .design .discription {
+    max-width: 100%;
+  }
+}
+/* end design */
+/* start team */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team h4 {
+  background-color: var(--green-color);
+}
+.project {
+  background-color: var(--dark-color);
+}
+/* end team */
+/* start subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type='text'] {
+  border: none;
+  border-bottom: 1px solid white;
+  caret-color: white;
+}
+.subscribe input[type='text']::placeholder {
+  color: white;
+}
+.subscribe input[type='text']:focus {
+  outline: none;
+}
+.subscribe input[type='submit'] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+  border: none;
+}
+/* end subscribe */
+/* start footer */
+footer {
+  background-color: var(--dark-color);
+}
+footer svg {
+  color: white;
+}
+footer .copywrite > span {
+  color: var(--green-color);
+}
+footer .copywrite div span {
+  color: var(--yellow-color);
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.facebook {
+  background-color: #1877f2;
+}
+.linkedin {
+  background-color: #0077b5;
+}
+.youtube {
+  background-color: #ff0000;
+}
+/* end footer */
